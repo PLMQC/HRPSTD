@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Details_for_the_month_of_____MonthName">
+          <DataField>Monthly_Attendance_Details_for_the_month_of_____MonthName</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Employee_Code_">
+          <DataField>Monthly_Attendance__Employee_Code_</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Employee_Name_">
+          <DataField>Monthly_Attendance__Employee_Name_</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Leaves">
+          <DataField>Monthly_Attendance_Leaves</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_LeavesFormat">
+          <DataField>Monthly_Attendance_LeavesFormat</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Attendance">
+          <DataField>Monthly_Attendance_Attendance</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_AttendanceFormat">
+          <DataField>Monthly_Attendance_AttendanceFormat</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Holidays">
+          <DataField>Monthly_Attendance_Holidays</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_HolidaysFormat">
+          <DataField>Monthly_Attendance_HolidaysFormat</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Monthly_Attendance___Loss_Of_Pay_">
+          <DataField>Monthly_Attendance__Monthly_Attendance___Loss_Of_Pay_</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Monthly_Attendance___Loss_Of_Pay_Format">
+          <DataField>Monthly_Attendance__Monthly_Attendance___Loss_Of_Pay_Format</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Monthly_Attendance___Over_Time_Hrs_">
+          <DataField>Monthly_Attendance__Monthly_Attendance___Over_Time_Hrs_</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Monthly_Attendance___Over_Time_Hrs_Format">
+          <DataField>Monthly_Attendance__Monthly_Attendance___Over_Time_Hrs_Format</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Gross_Salary_">
+          <DataField>Monthly_Attendance__Gross_Salary_</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Gross_Salary_Format">
+          <DataField>Monthly_Attendance__Gross_Salary_Format</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Deductions">
+          <DataField>Monthly_Attendance_Deductions</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_DeductionsFormat">
+          <DataField>Monthly_Attendance_DeductionsFormat</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Net_Salary_">
+          <DataField>Monthly_Attendance__Net_Salary_</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Net_Salary_Format">
+          <DataField>Monthly_Attendance__Net_Salary_Format</DataField>
+        </Field>
+        <Field Name="Emp_CodeCaption">
+          <DataField>Emp_CodeCaption</DataField>
+        </Field>
+        <Field Name="Emp_NameCaption">
+          <DataField>Emp_NameCaption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_LeavesCaption">
+          <DataField>Monthly_Attendance_LeavesCaption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_AttendanceCaption">
+          <DataField>Monthly_Attendance_AttendanceCaption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_HolidaysCaption">
+          <DataField>Monthly_Attendance_HolidaysCaption</DataField>
+        </Field>
+        <Field Name="LOPCaption">
+          <DataField>LOPCaption</DataField>
+        </Field>
+        <Field Name="OTCaption">
+          <DataField>OTCaption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Gross_Salary_Caption">
+          <DataField>Monthly_Attendance__Gross_Salary_Caption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_DeductionsCaption">
+          <DataField>Monthly_Attendance_DeductionsCaption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Net_Salary_Caption">
+          <DataField>Monthly_Attendance__Net_Salary_Caption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Pay_Slip_Month">
+          <DataField>Monthly_Attendance_Pay_Slip_Month</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Year">
+          <DataField>Monthly_Attendance_Year</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Line_No_">
+          <DataField>Monthly_Attendance_Line_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

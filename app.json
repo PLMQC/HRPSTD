@@ -1,0 +1,40 @@
+{
+  "id": "253022c7-9d9e-4379-8677-6d27a4572c9a",
+  "name": "B2B HR & Payroll",
+  "publisher": "B2B Software Technologies Limited",
+  "version": "1.0.0.0",
+  "brief": "Solution for HR and Payroll Activities",
+  "description": "B2B’s HR & Payroll module helps the Human Resource Department function efficiently & plan its Human Resource deployment, recruitment management, and track employee performance. B2B’s HR & Payroll module provides organizations with a simple processing method for payroll processing by computing salaries, Leave Management and Attendance Management.",
+  "privacyStatement": "https://b2bsoftech.com/contactus.html",
+  "EULA": "https://b2bsoftech.com/contactus.html",
+  "help": "https://b2bsoftech.com/b2b_hr_payroll.html",
+  "url": "https://b2bsoftech.com/contactus.html",
+  "logo": "Logo/Logo.png",
+  "dependencies": [
+    {
+      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+      "publisher": "Microsoft",
+      "name": "System Application",
+      "version": "21.0.46256.46853"
+    },
+    {
+      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
+      "publisher": "Microsoft",
+      "name": "Base Application",
+      "version": "21.0.46256.46853"
+    }
+  ],
+  "screenshots": [],
+  "platform": "21.0.0.0",
+  "application": "21.0.0.0",
+  "idRanges": [
+    {
+      "from": 1,
+      "to": 33001600
+    }
+  ],    
+  "runtime": "10.0",
+  "target": "OnPrem",
+  "features": ["TranslationFile","GenerateCaptions"],
+  "contextSensitiveHelpUrl": "https://b2bsoftech.com/contactus.html"
+}

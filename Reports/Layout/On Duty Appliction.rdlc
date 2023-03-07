@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompInfo_Picture">
+          <DataField>CompInfo_Picture</DataField>
+        </Field>
+        <Field Name="Attendance_Header_Document_Type">
+          <DataField>Attendance_Header_Document_Type</DataField>
+        </Field>
+        <Field Name="Attendance_Header_No_">
+          <DataField>Attendance_Header_No_</DataField>
+        </Field>
+        <Field Name="Attendance_Lines__Employee_Name_">
+          <DataField>Attendance_Lines__Employee_Name_</DataField>
+        </Field>
+        <Field Name="Department">
+          <DataField>Department</DataField>
+        </Field>
+        <Field Name="Attendance_Header___Start_Date_">
+          <DataField>Attendance_Header___Start_Date_</DataField>
+        </Field>
+        <Field Name="to_______FORMAT__Attendance_Header___End_Date__">
+          <DataField>to_______FORMAT__Attendance_Header___End_Date__</DataField>
+        </Field>
+        <Field Name="FORMAT_NoOfDays_">
+          <DataField>FORMAT_NoOfDays_</DataField>
+        </Field>
+        <Field Name="ToLocation">
+          <DataField>ToLocation</DataField>
+        </Field>
+        <Field Name="AssaignmentDetails">
+          <DataField>AssaignmentDetails</DataField>
+        </Field>
+        <Field Name="Attendance_Header___Advance_Request_">
+          <DataField>Attendance_Header___Advance_Request_</DataField>
+        </Field>
+        <Field Name="Attendance_Header___Advance_Request_Format">
+          <DataField>Attendance_Header___Advance_Request_Format</DataField>
+        </Field>
+        <Field Name="NoText_1______NoText_2_">
+          <DataField>NoText_1______NoText_2_</DataField>
+        </Field>
+        <Field Name="Date_Caption">
+          <DataField>Date_Caption</DataField>
+        </Field>
+        <Field Name="Managing_Director_Caption">
+          <DataField>Managing_Director_Caption</DataField>
+        </Field>
+        <Field Name="Signature_of_Applicant_Caption">
+          <DataField>Signature_of_Applicant_Caption</DataField>
+        </Field>
+        <Field Name="Head_of_Dept__Caption">
+          <DataField>Head_of_Dept__Caption</DataField>
+        </Field>
+        <Field Name="Places_Caption">
+          <DataField>Places_Caption</DataField>
+        </Field>
+        <Field Name="days_toCaption">
+          <DataField>days_toCaption</DataField>
+        </Field>
+        <Field Name="Intend_to_proceed_on_tour_from_Caption">
+          <DataField>Intend_to_proceed_on_tour_from_Caption</DataField>
+        </Field>
+        <Field Name="Dept_Caption">
+          <DataField>Dept_Caption</DataField>
+        </Field>
+        <Field Name="ForCaption">
+          <DataField>ForCaption</DataField>
+        </Field>
+        <Field Name="TOUR_INTIMATIONCaption">
+          <DataField>TOUR_INTIMATIONCaption</DataField>
+        </Field>
+        <Field Name="Special_Note___No_fresh_Advance_to_be_paid_unless_earlier_settledCaption">
+          <DataField>Special_Note___No_fresh_Advance_to_be_paid_unless_earlier_settledCaption</DataField>
+        </Field>
+        <Field Name="To_Caption">
+          <DataField>To_Caption</DataField>
+        </Field>
+        <Field Name="Accounts___HR_Department__Caption">
+          <DataField>Accounts___HR_Department__Caption</DataField>
+        </Field>
+        <Field Name="ICaption">
+          <DataField>ICaption</DataField>
+        </Field>
+        <Field Name="Assignment_No____Name__Caption">
+          <DataField>Assignment_No____Name__Caption</DataField>
+        </Field>
+        <Field Name="Any_Other_Details__Caption">
+          <DataField>Any_Other_Details__Caption</DataField>
+        </Field>
+        <Field Name="Kindly_arrange_to_pay_me_tour_advance_of_Rs_Caption">
+          <DataField>Kindly_arrange_to_pay_me_tour_advance_of_Rs_Caption</DataField>
+        </Field>
+        <Field Name="In_Words_Caption">
+          <DataField>In_Words_Caption</DataField>
+        </Field>
+        <Field Name="I_have_settled_previous_tour_advances_Caption">
+          <DataField>I_have_settled_previous_tour_advances_Caption</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Document_Type">
+          <DataField>Attendance_Lines_Document_Type</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Document_No_">
+          <DataField>Attendance_Lines_Document_No_</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Employee_Code">
+          <DataField>Attendance_Lines_Employee_Code</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Start_Date">
+          <DataField>Attendance_Lines_Start_Date</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompInfo_Picture">
+          <DataField>CompInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompInfo_Name">
+          <DataField>CompInfo_Name</DataField>
+        </Field>
+        <Field Name="EmployeeName">
+          <DataField>EmployeeName</DataField>
+        </Field>
+        <Field Name="EmpDesignation">
+          <DataField>EmpDesignation</DataField>
+        </Field>
+        <Field Name="HireDate">
+          <DataField>HireDate</DataField>
+        </Field>
+        <Field Name="HOD">
+          <DataField>HOD</DataField>
+        </Field>
+        <Field Name="Jobtitle">
+          <DataField>Jobtitle</DataField>
+        </Field>
+        <Field Name="ResignedDate">
+          <DataField>ResignedDate</DataField>
+        </Field>
+        <Field Name="EXIT_INTERVIEWCaption">
+          <DataField>EXIT_INTERVIEWCaption</DataField>
+        </Field>
+        <Field Name="Employee_NameCaption">
+          <DataField>Employee_NameCaption</DataField>
+        </Field>
+        <Field Name="DesignationCaption">
+          <DataField>DesignationCaption</DataField>
+        </Field>
+        <Field Name="Hire_DateCaption">
+          <DataField>Hire_DateCaption</DataField>
+        </Field>
+        <Field Name="HODCaption">
+          <DataField>HODCaption</DataField>
+        </Field>
+        <Field Name="Job_TitleCaption">
+          <DataField>Job_TitleCaption</DataField>
+        </Field>
+        <Field Name="Resigned_DateCaption">
+          <DataField>Resigned_DateCaption</DataField>
+        </Field>
+        <Field Name="Employee_Seperation_Seperation_ID">
+          <DataField>Employee_Seperation_Seperation_ID</DataField>
+        </Field>
+        <Field Name="Employee_Seperation_Employee_ID">
+          <DataField>Employee_Seperation_Employee_ID</DataField>
+        </Field>
+        <Field Name="Employee_Separation_Line_Question">
+          <DataField>Employee_Separation_Line_Question</DataField>
+        </Field>
+        <Field Name="Employee_Separation_Line_Seperation_ID">
+          <DataField>Employee_Separation_Line_Seperation_ID</DataField>
+        </Field>
+        <Field Name="Employee_Separation_Line_Line_No_">
+          <DataField>Employee_Separation_Line_Line_No_</DataField>
+        </Field>
+        <Field Name="Employee_Separation_Line_Employee_ID">
+          <DataField>Employee_Separation_Line_Employee_ID</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

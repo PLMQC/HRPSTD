@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>25d6a9ff-799a-4b7b-9d69-08a583d23648</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Image Name="CompInfo_Picture">
+            <Source>Database</Source>
+            <Value>=First(Fields!CompInfo_Picture.Value)</Value>
+            <MIMEType>image/bmp</MIMEType>
+            <Left>0cm</Left>
+            <Height>1.48246cm</Height>
+            <Width>3.66679cm</Width>
+            <Style />
+          </Image>
+          <Textbox Name="TOUR_INTIMATIONCaption">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!TOUR_INTIMATIONCaption.Value)</Value>
+                    <Style>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>TOUR_INTIMATIONCaption</rd:DefaultName>
+            <Top>2.85714cm</Top>
+            <Left>0.66138cm</Left>
+            <Height>0.63492cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Special_Note___No_fresh_Advance_to_be_paid_unless_earlier_settledCaption">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Special_Note___No_fresh_Advance_to_be_paid_unless_earlier_settledCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Special_Note___No_fresh_Advance_to_be_paid_unless_earlier_settledCaption</rd:DefaultName>
+            <Top>4.12698cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!To_Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.7619cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Accounts___HR_Department__Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.87308cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!ICaption.Value &amp; "   "  &amp;
+Fields!Attendance_Lines__Employee_Name_.Value &amp; "  " &amp;
+Fields!Dept_Caption.Value &amp; "  " &amp;
+Fields!Department.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">  </Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Fields!Intend_to_proceed_on_tour_from_Caption.Value &amp; "  " &amp;
+Fields!Attendance_Header___Start_Date_.Value &amp; "  " &amp;
+Fields!to_______FORMAT__Attendance_Header___End_Date__.Value &amp; " " &amp;
+Fields!ForCaption.Value &amp; "  " &amp;
+Fields!FORMAT_NoOfDays_.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">   </Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Fields!days_toCaption.Value &amp; " " &amp;
+Fields!ToLocation.Value &amp; " " &amp;
+Fields!Places_Caption.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">   </Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Fields!Assignment_No____Name__Caption.Value &amp; " " &amp;
+Fields!AssaignmentDetails.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.50787cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox9">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Any_Other_Details__Caption.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>8.3173cm</Top>
+            <Left>0.66138cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Kindly_arrange_to_pay_me_tour_advance_of_Rs_Caption.Value &amp; " " &amp;
+Fields!Attendance_Header___Advance_Request_.Value &amp; " " &amp;
+Fields!In_Words_Caption.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>8.95223cm</Top>
+            <Left>0.66138cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!NoText_1______NoText_2_.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>9.58714cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!I_have_settled_previous_tour_advances_Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>10.22207cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>13.33333cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox14">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Signature_of_Applicant_Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>13.01587cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>3.98437cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Date_Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>13.96825cm</Top>
+            <Left>0.63492cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>3.98437cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Head_of_Dept__Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>13.01587cm</Top>
+            <Left>9.87298cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>3.98437cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox15">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Managing_Director_Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>14.28571cm</Top>
+            <Left>9.87298cm</Left>
+            <Height>0.31746cm</Height>
+            <Width>3.98437cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>11.24162cm</Top>
+            <Left>0.26141cm</Left>
+            <Height>0.6cm</Height>
+            <Width>13.7333cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>14.60317cm</Height>
+        <Style />
+      </Body>
+      <Width>13.99471cm</Width>
+      <Page>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>2.5cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>1cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>9d3da658-df12-4933-84b9-4d7ca0ecc9c3</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompInfo_Picture">
+          <DataField>CompInfo_Picture</DataField>
+        </Field>
+        <Field Name="Attendance_Header_Document_Type">
+          <DataField>Attendance_Header_Document_Type</DataField>
+        </Field>
+        <Field Name="Attendance_Header_No_">
+          <DataField>Attendance_Header_No_</DataField>
+        </Field>
+        <Field Name="FORMAT_NoOfDays_">
+          <DataField>FORMAT_NoOfDays_</DataField>
+        </Field>
+        <Field Name="Attendance_Lines__Employee_Name_">
+          <DataField>Attendance_Lines__Employee_Name_</DataField>
+        </Field>
+        <Field Name="Department">
+          <DataField>Department</DataField>
+        </Field>
+        <Field Name="Attendance_Header___Start_Date_">
+          <DataField>Attendance_Header___Start_Date_</DataField>
+        </Field>
+        <Field Name="to_______FORMAT__Attendance_Header___End_Date__">
+          <DataField>to_______FORMAT__Attendance_Header___End_Date__</DataField>
+        </Field>
+        <Field Name="ToLocation">
+          <DataField>ToLocation</DataField>
+        </Field>
+        <Field Name="AssaignmentDetails">
+          <DataField>AssaignmentDetails</DataField>
+        </Field>
+        <Field Name="Attendance_Header___Advance_Request_">
+          <DataField>Attendance_Header___Advance_Request_</DataField>
+        </Field>
+        <Field Name="Attendance_Header___Advance_Request_Format">
+          <DataField>Attendance_Header___Advance_Request_Format</DataField>
+        </Field>
+        <Field Name="NoText_1______NoText_2_">
+          <DataField>NoText_1______NoText_2_</DataField>
+        </Field>
+        <Field Name="Date_Caption">
+          <DataField>Date_Caption</DataField>
+        </Field>
+        <Field Name="Managing_Director_Caption">
+          <DataField>Managing_Director_Caption</DataField>
+        </Field>
+        <Field Name="Signature_of_Applicant_Caption">
+          <DataField>Signature_of_Applicant_Caption</DataField>
+        </Field>
+        <Field Name="Head_of_Dept__Caption">
+          <DataField>Head_of_Dept__Caption</DataField>
+        </Field>
+        <Field Name="Places_Caption">
+          <DataField>Places_Caption</DataField>
+        </Field>
+        <Field Name="days_toCaption">
+          <DataField>days_toCaption</DataField>
+        </Field>
+        <Field Name="Intend_to_proceed_on_tour_from_Caption">
+          <DataField>Intend_to_proceed_on_tour_from_Caption</DataField>
+        </Field>
+        <Field Name="Dept_Caption">
+          <DataField>Dept_Caption</DataField>
+        </Field>
+        <Field Name="ForCaption">
+          <DataField>ForCaption</DataField>
+        </Field>
+        <Field Name="TOUR_INTIMATIONCaption">
+          <DataField>TOUR_INTIMATIONCaption</DataField>
+        </Field>
+        <Field Name="Special_Note___No_fresh_Advance_to_be_paid_unless_earlier_settledCaption">
+          <DataField>Special_Note___No_fresh_Advance_to_be_paid_unless_earlier_settledCaption</DataField>
+        </Field>
+        <Field Name="To_Caption">
+          <DataField>To_Caption</DataField>
+        </Field>
+        <Field Name="Accounts___HR_Department__Caption">
+          <DataField>Accounts___HR_Department__Caption</DataField>
+        </Field>
+        <Field Name="ICaption">
+          <DataField>ICaption</DataField>
+        </Field>
+        <Field Name="Assignment_No____Name__Caption">
+          <DataField>Assignment_No____Name__Caption</DataField>
+        </Field>
+        <Field Name="Any_Other_Details__Caption">
+          <DataField>Any_Other_Details__Caption</DataField>
+        </Field>
+        <Field Name="Kindly_arrange_to_pay_me_tour_advance_of_Rs_Caption">
+          <DataField>Kindly_arrange_to_pay_me_tour_advance_of_Rs_Caption</DataField>
+        </Field>
+        <Field Name="In_Words_Caption">
+          <DataField>In_Words_Caption</DataField>
+        </Field>
+        <Field Name="I_have_settled_previous_tour_advances_Caption">
+          <DataField>I_have_settled_previous_tour_advances_Caption</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Document_Type">
+          <DataField>Attendance_Lines_Document_Type</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Document_No_">
+          <DataField>Attendance_Lines_Document_No_</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Employee_Code">
+          <DataField>Attendance_Lines_Employee_Code</DataField>
+        </Field>
+        <Field Name="Attendance_Lines_Start_Date">
+          <DataField>Attendance_Lines_Start_Date</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="ESIYear">
+          <DataField>ESIYear</DataField>
+        </Field>
+        <Field Name="ESIMonth">
+          <DataField>ESIMonth</DataField>
+        </Field>
+        <Field Name="TotalBASIC">
+          <DataField>TotalBASIC</DataField>
+        </Field>
+        <Field Name="TotalBASICFormat">
+          <DataField>TotalBASICFormat</DataField>
+        </Field>
+        <Field Name="TotalHRA">
+          <DataField>TotalHRA</DataField>
+        </Field>
+        <Field Name="TotalHRAFormat">
+          <DataField>TotalHRAFormat</DataField>
+        </Field>
+        <Field Name="TotalSpecialAllowances">
+          <DataField>TotalSpecialAllowances</DataField>
+        </Field>
+        <Field Name="TotalSpecialAllowancesFormat">
+          <DataField>TotalSpecialAllowancesFormat</DataField>
+        </Field>
+        <Field Name="TotalConveyance">
+          <DataField>TotalConveyance</DataField>
+        </Field>
+        <Field Name="TotalConveyanceFormat">
+          <DataField>TotalConveyanceFormat</DataField>
+        </Field>
+        <Field Name="TotalWages">
+          <DataField>TotalWages</DataField>
+        </Field>
+        <Field Name="TotalWagesFormat">
+          <DataField>TotalWagesFormat</DataField>
+        </Field>
+        <Field Name="TotalAttendance">
+          <DataField>TotalAttendance</DataField>
+        </Field>
+        <Field Name="TotalAttendanceFormat">
+          <DataField>TotalAttendanceFormat</DataField>
+        </Field>
+        <Field Name="TotalEmployerContri">
+          <DataField>TotalEmployerContri</DataField>
+        </Field>
+        <Field Name="TotalEmployerContriFormat">
+          <DataField>TotalEmployerContriFormat</DataField>
+        </Field>
+        <Field Name="TotalEmployeeContri">
+          <DataField>TotalEmployeeContri</DataField>
+        </Field>
+        <Field Name="TotalEmployeeContriFormat">
+          <DataField>TotalEmployeeContriFormat</DataField>
+        </Field>
+        <Field Name="GrandESITotal">
+          <DataField>GrandESITotal</DataField>
+        </Field>
+        <Field Name="GrandESITotalFormat">
+          <DataField>GrandESITotalFormat</DataField>
+        </Field>
+        <Field Name="ESI_ContributionCaption">
+          <DataField>ESI_ContributionCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Month__Caption">
+          <DataField>Month__Caption</DataField>
+        </Field>
+        <Field Name="Year__Caption">
+          <DataField>Year__Caption</DataField>
+        </Field>
+        <Field Name="BasicCaption">
+          <DataField>BasicCaption</DataField>
+        </Field>
+        <Field Name="Employee_No_Caption">
+          <DataField>Employee_No_Caption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="HRACaption">
+          <DataField>HRACaption</DataField>
+        </Field>
+        <Field Name="MedicalCaption">
+          <DataField>MedicalCaption</DataField>
+        </Field>
+        <Field Name="Food_CopCaption">
+          <DataField>Food_CopCaption</DataField>
+        </Field>
+        <Field Name="Spl_AllCaption">
+          <DataField>Spl_AllCaption</DataField>
+        </Field>
+        <Field Name="ConveyanceCaption">
+          <DataField>ConveyanceCaption</DataField>
+        </Field>
+        <Field Name="WagesCaption">
+          <DataField>WagesCaption</DataField>
+        </Field>
+        <Field Name="Payable_daysCaption">
+          <DataField>Payable_daysCaption</DataField>
+        </Field>
+        <Field Name="EMP_ER__CONTCaption">
+          <DataField>EMP_ER__CONTCaption</DataField>
+        </Field>
+        <Field Name="EMP_EE__CONTCaption">
+          <DataField>EMP_EE__CONTCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="Employee_B2B_No_">
+          <DataField>Employee_B2B_No_</DataField>
+        </Field>
+        <Field Name="EmployeeGRec_FirstName">
+          <DataField>EmployeeGRec_FirstName</DataField>
+        </Field>
+        <Field Name="EmployeeGRec_MiddleName">
+          <DataField>EmployeeGRec_MiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeGRec_Initials">
+          <DataField>EmployeeGRec_Initials</DataField>
+        </Field>
+        <Field Name="Processed_Salary__Employee_Code_">
+          <DataField>Processed_Salary__Employee_Code_</DataField>
+        </Field>
+        <Field Name="EmployeeGRec__First_Name______EmployeeGRec__Middle_Name______EmployeeGRec_Initials">
+          <DataField>EmployeeGRec__First_Name______EmployeeGRec__Middle_Name______EmployeeGRec_Initials</DataField>
+        </Field>
+        <Field Name="PayelementEarned_1_">
+          <DataField>PayelementEarned_1_</DataField>
+        </Field>
+        <Field Name="PayelementEarned_1_Format">
+          <DataField>PayelementEarned_1_Format</DataField>
+        </Field>
+        <Field Name="PayelementEarned_2_">
+          <DataField>PayelementEarned_2_</DataField>
+        </Field>
+        <Field Name="PayelementEarned_2_Format">
+          <DataField>PayelementEarned_2_Format</DataField>
+        </Field>
+        <Field Name="PayelementEarned_3_">
+          <DataField>PayelementEarned_3_</DataField>
+        </Field>
+        <Field Name="PayelementEarned_3_Format">
+          <DataField>PayelementEarned_3_Format</DataField>
+        </Field>
+        <Field Name="PayelementEarned_4_">
+          <DataField>PayelementEarned_4_</DataField>
+        </Field>
+        <Field Name="PayelementEarned_4_Format">
+          <DataField>PayelementEarned_4_Format</DataField>
+        </Field>
+        <Field Name="PayelementEarned_1__PayelementEarned_2__PayelementEarned_3__PayelementEarned_4_">
+          <DataField>PayelementEarned_1__PayelementEarned_2__PayelementEarned_3__PayelementEarned_4_</DataField>
+        </Field>
+        <Field Name="PayelementEarned_1__PayelementEarned_2__PayelementEarned_3__PayelementEarned_4_Format">
+          <DataField>PayelementEarned_1__PayelementEarned_2__PayelementEarned_3__PayelementEarned_4_Format</DataField>
+        </Field>
+        <Field Name="ProcessedsalaryGrec_Attendance">
+          <DataField>ProcessedsalaryGrec_Attendance</DataField>
+        </Field>
+        <Field Name="ProcessedsalaryGrec_AttendanceFormat">
+          <DataField>ProcessedsalaryGrec_AttendanceFormat</DataField>
+        </Field>
+        <Field Name="EmployerContri">
+          <DataField>EmployerContri</DataField>
+        </Field>
+        <Field Name="EmployerContriFormat">
+          <DataField>EmployerContriFormat</DataField>
+        </Field>
+        <Field Name="EmployeeContri">
+          <DataField>EmployeeContri</DataField>
+        </Field>
+        <Field Name="EmployeeContriFormat">
+          <DataField>EmployeeContriFormat</DataField>
+        </Field>
+        <Field Name="TotalESIConti">
+          <DataField>TotalESIConti</DataField>
+        </Field>
+        <Field Name="TotalESIContiFormat">
+          <DataField>TotalESIContiFormat</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Document_Type">
+          <DataField>Processed_Salary_Document_Type</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Pay_Slip_Month">
+          <DataField>Processed_Salary_Pay_Slip_Month</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Year">
+          <DataField>Processed_Salary_Year</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Line_No_">
+          <DataField>Processed_Salary_Line_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

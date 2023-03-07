@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="Job_Description_Header_RO___Job_Description_Header_RO____Job_Description_">
+          <DataField>Job_Description_Header_RO___Job_Description_Header_RO____Job_Description_</DataField>
+        </Field>
+        <Field Name="Job_Description_Header_RO___Job_Description_Header_RO____Reports_To_Designation_">
+          <DataField>Job_Description_Header_RO___Job_Description_Header_RO____Reports_To_Designation_</DataField>
+        </Field>
+        <Field Name="Job_Description_Header_RO___Job_Description_Header_RO___Department">
+          <DataField>Job_Description_Header_RO___Job_Description_Header_RO___Department</DataField>
+        </Field>
+        <Field Name="Job_Description_Header_RO___Job_Description_Header_RO____Type_of_Position_">
+          <DataField>Job_Description_Header_RO___Job_Description_Header_RO____Type_of_Position_</DataField>
+        </Field>
+        <Field Name="Job_Description_Header_RO___Job_Description_Header_RO____Job_Designation_">
+          <DataField>Job_Description_Header_RO___Job_Description_Header_RO____Job_Designation_</DataField>
+        </Field>
+        <Field Name="Job_Description_Header_RO___Job_Description_Header_RO____Global_Dimension_1_">
+          <DataField>Job_Description_Header_RO___Job_Description_Header_RO____Global_Dimension_1_</DataField>
+        </Field>
+        <Field Name="JOB_DESCRIPTION_FORMCaption">
+          <DataField>JOB_DESCRIPTION_FORMCaption</DataField>
+        </Field>
+        <Field Name="Completion_of_this_Form_is_mandatoryCaption">
+          <DataField>Completion_of_this_Form_is_mandatoryCaption</DataField>
+        </Field>
+        <Field Name="Job_DescriptionCaption">
+          <DataField>Job_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Reports_to_DesignationCaption">
+          <DataField>Reports_to_DesignationCaption</DataField>
+        </Field>
+        <Field Name="DepartmentCaption">
+          <DataField>DepartmentCaption</DataField>
+        </Field>
+        <Field Name="Type_of_PostionCaption">
+          <DataField>Type_of_PostionCaption</DataField>
+        </Field>
+        <Field Name="Job_DesignationCaption">
+          <DataField>Job_DesignationCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption">
+          <DataField>EmptyStringCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102152020">
+          <DataField>EmptyStringCaption_Control1102152020</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102152021">
+          <DataField>EmptyStringCaption_Control1102152021</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102152027">
+          <DataField>EmptyStringCaption_Control1102152027</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102152037">
+          <DataField>EmptyStringCaption_Control1102152037</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102152051">
+          <DataField>EmptyStringCaption_Control1102152051</DataField>
+        </Field>
+        <Field Name="Issue_CodeCaption">
+          <DataField>Issue_CodeCaption</DataField>
+        </Field>
+        <Field Name="Job_Description_Header_RO__No_">
+          <DataField>Job_Description_Header_RO__No_</DataField>
+        </Field>
+        <Field Name="Job_Description_Line_RO___Job_Description_Line_RO___Description">
+          <DataField>Job_Description_Line_RO___Job_Description_Line_RO___Description</DataField>
+        </Field>
+        <Field Name="SNo">
+          <DataField>SNo</DataField>
+        </Field>
+        <Field Name="Job_HeadingCaption">
+          <DataField>Job_HeadingCaption</DataField>
+        </Field>
+        <Field Name="JobResponseCaption">
+          <DataField>JobResponseCaption</DataField>
+        </Field>
+        <Field Name="Job_Description_Line_Job_Code">
+          <DataField>Job_Description_Line_Job_Code</DataField>
+        </Field>
+        <Field Name="Job_Description_Line_Line_No_">
+          <DataField>Job_Description_Line_Line_No_</DataField>
+        </Field>
+        <Field Name="Job_Description_Line_Type">
+          <DataField>Job_Description_Line_Type</DataField>
+        </Field>
+        <Field Name="Job_Description_Line__Requirements">
+          <DataField>Job_Description_Line__Requirements</DataField>
+        </Field>
+        <Field Name="SNo_Control1102152046">
+          <DataField>SNo_Control1102152046</DataField>
+        </Field>
+        <Field Name="JobReqCaption">
+          <DataField>JobReqCaption</DataField>
+        </Field>
+        <Field Name="Job_Description_Line2__Job_Code">
+          <DataField>Job_Description_Line2__Job_Code</DataField>
+        </Field>
+        <Field Name="Job_Description_Line2__Line_No_">
+          <DataField>Job_Description_Line2__Line_No_</DataField>
+        </Field>
+        <Field Name="Job_Description_Line2__Type">
+          <DataField>Job_Description_Line2__Type</DataField>
+        </Field>
+        <Field Name="Job_Description_Line__Competences">
+          <DataField>Job_Description_Line__Competences</DataField>
+        </Field>
+        <Field Name="SNo_Control1102152060">
+          <DataField>SNo_Control1102152060</DataField>
+        </Field>
+        <Field Name="JobCompCaption">
+          <DataField>JobCompCaption</DataField>
+        </Field>
+        <Field Name="Job_Description_Line3__Job_Code">
+          <DataField>Job_Description_Line3__Job_Code</DataField>
+        </Field>
+        <Field Name="Job_Description_Line3__Line_No_">
+          <DataField>Job_Description_Line3__Line_No_</DataField>
+        </Field>
+        <Field Name="Job_Description_Line3__Type">
+          <DataField>Job_Description_Line3__Type</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,17 @@
+{
+    "name": "Payroll",
+    "description": "Payroll",
+    "includedRuleSets": [
+        {
+            "action": "Default",
+            "path": "./Payroll.ruleset.json"
+        }
+    ],
+    "rules": [
+        {
+            "id": "AA0214",
+            "action": "None",
+            "justification": "Ignored"
+        }            
+    ]
+}

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="companyinfo__Address_2_">
+          <DataField>companyinfo__Address_2_</DataField>
+        </Field>
+        <Field Name="companyinfo_Address">
+          <DataField>companyinfo_Address</DataField>
+        </Field>
+        <Field Name="companyinfo_Name">
+          <DataField>companyinfo_Name</DataField>
+        </Field>
+        <Field Name="PFMonth">
+          <DataField>PFMonth</DataField>
+        </Field>
+        <Field Name="PFYear">
+          <DataField>PFYear</DataField>
+        </Field>
+        <Field Name="companyinfo__Address_2__Control1102152013">
+          <DataField>companyinfo__Address_2__Control1102152013</DataField>
+        </Field>
+        <Field Name="SlNo">
+          <DataField>SlNo</DataField>
+        </Field>
+        <Field Name="Employee_B2B_Employee_B2B__PF_No_">
+          <DataField>Employee_B2B_Employee_B2B__PF_No_</DataField>
+        </Field>
+        <Field Name="Employee_B2B_FullName">
+          <DataField>Employee_B2B_FullName</DataField>
+        </Field>
+        <Field Name="Employee_B2B_Employee_B2B__Father_Husband_">
+          <DataField>Employee_B2B_Employee_B2B__Father_Husband_</DataField>
+        </Field>
+        <Field Name="Employee_B2B_Employee_B2B__Birth_Date_">
+          <DataField>Employee_B2B_Employee_B2B__Birth_Date_</DataField>
+        </Field>
+        <Field Name="Employee_B2B_Employee_B2B_Gender">
+          <DataField>Employee_B2B_Employee_B2B_Gender</DataField>
+        </Field>
+        <Field Name="Employee_B2B_Employee_B2B__Employment_Date_">
+          <DataField>Employee_B2B_Employee_B2B__Employment_Date_</DataField>
+        </Field>
+        <Field Name="Show">
+          <DataField>Show</DataField>
+        </Field>
+        <Field Name="Code_NoCaption">
+          <DataField>Code_NoCaption</DataField>
+        </Field>
+        <Field Name="Name_and_address_of_the_Factory_EstablishmentCaption">
+          <DataField>Name_and_address_of_the_Factory_EstablishmentCaption</DataField>
+        </Field>
+        <Field Name="To_be_sent_to_the_Commissioner_with_Form_2_EPF_and__EPS_Caption">
+          <DataField>To_be_sent_to_the_Commissioner_with_Form_2_EPF_and__EPS_Caption</DataField>
+        </Field>
+        <Field Name="time_during_month_ofCaption">
+          <DataField>time_during_month_ofCaption</DataField>
+        </Field>
+        <Field Name="Return_of_Employees">
+          <DataField>Return_of_Employees</DataField>
+        </Field>
+        <Field Name="THE_EMPLOYEES_PROVIDENT_FUNDS">
+          <DataField>THE_EMPLOYEES_PROVIDENT_FUNDS</DataField>
+        </Field>
+        <Field Name="FORM_NO__5Caption">
+          <DataField>FORM_NO__5Caption</DataField>
+        </Field>
+        <Field Name="Sl_No_Caption">
+          <DataField>Sl_No_Caption</DataField>
+        </Field>
+        <Field Name="Account_No_Caption">
+          <DataField>Account_No_Caption</DataField>
+        </Field>
+        <Field Name="V1Caption">
+          <DataField>V1Caption</DataField>
+        </Field>
+        <Field Name="V2Caption">
+          <DataField>V2Caption</DataField>
+        </Field>
+        <Field Name="Name_of_the_Employee__in_block_letters_Caption">
+          <DataField>Name_of_the_Employee__in_block_letters_Caption</DataField>
+        </Field>
+        <Field Name="V3Caption">
+          <DataField>V3Caption</DataField>
+        </Field>
+        <Field Name="Father_s_Name___________________or_husband_s_name_in_the_case_of_married_woman_Caption">
+          <DataField>Father_s_Name___________________or_husband_s_name_in_the_case_of_married_woman_Caption</DataField>
+        </Field>
+        <Field Name="V4Caption">
+          <DataField>V4Caption</DataField>
+        </Field>
+        <Field Name="Date_of_BirthCaption">
+          <DataField>Date_of_BirthCaption</DataField>
+        </Field>
+        <Field Name="V5Caption">
+          <DataField>V5Caption</DataField>
+        </Field>
+        <Field Name="SEXCaption">
+          <DataField>SEXCaption</DataField>
+        </Field>
+        <Field Name="V6Caption">
+          <DataField>V6Caption</DataField>
+        </Field>
+        <Field Name="Date_of_joining_the_FundCaption">
+          <DataField>Date_of_joining_the_FundCaption</DataField>
+        </Field>
+        <Field Name="V7Caption">
+          <DataField>V7Caption</DataField>
+        </Field>
+        <Field Name="Enclose_scheme_certificate_if_applicableCaption">
+          <DataField>Enclose_scheme_certificate_if_applicableCaption</DataField>
+        </Field>
+        <Field Name="Total_Period_of_previous_serviceas_on_the_date_of_joining_the_fund_Caption">
+          <DataField>Total_Period_of_previous_serviceas_on_the_date_of_joining_the_fund_Caption</DataField>
+        </Field>
+        <Field Name="V8Caption">
+          <DataField>V8Caption</DataField>
+        </Field>
+        <Field Name="RemarksCaption">
+          <DataField>RemarksCaption</DataField>
+        </Field>
+        <Field Name="V9Caption">
+          <DataField>V9Caption</DataField>
+        </Field>
+        <Field Name="Date__Caption">
+          <DataField>Date__Caption</DataField>
+        </Field>
+        <Field Name="Signature_of_the_employer_or_other_authorised_Officer_Stamp_of_the_Factory_establishment_Caption">
+          <DataField>Signature_of_the_employer_or_other_authorised_Officer_Stamp_of_the_Factory_establishment_Caption</DataField>
+        </Field>
+        <Field Name="Employee_B2B_No_">
+          <DataField>Employee_B2B_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>73bf9028-f19a-4231-a1b8-4fd8eda4c625</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>25.41001cm</Height>
+        <Style />
+      </Body>
+      <Width>42.523cm</Width>
+      <Page>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>19.915cm</PageWidth>
+        <LeftMargin>2.1cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>0cm</TopMargin>
+        <BottomMargin>0cm</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>b254988a-ee2f-4a8a-b607-2b098fadf9ef</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address_CompanyInfo__Address_2______CompanyInfo_City">
+          <DataField>CompanyInfo_Address_CompanyInfo__Address_2______CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="District___State_Description_____CountryName___PIN___CompanyInfo__Post_Code_">
+          <DataField>District___State_Description_____CountryName___PIN___CompanyInfo__Post_Code_</DataField>
+        </Field>
+        <Field Name="Tel____CompanyInfo__Phone_No__">
+          <DataField>Tel____CompanyInfo__Phone_No__</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Employee_Code_">
+          <DataField>Monthly_Attendance__Employee_Code_</DataField>
+        </Field>
+        <Field Name="Designation">
+          <DataField>Designation</DataField>
+        </Field>
+        <Field Name="Department_">
+          <DataField>Department_</DataField>
+        </Field>
+        <Field Name="WorkingDays">
+          <DataField>WorkingDays</DataField>
+        </Field>
+        <Field Name="WorkingDaysFormat">
+          <DataField>WorkingDaysFormat</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Employee_Code__Control1102152006">
+          <DataField>Monthly_Attendance__Employee_Code__Control1102152006</DataField>
+        </Field>
+        <Field Name="FORMAT__Pay_Slip_For_The_Month_of_______Month_____FORMAT_Year__">
+          <DataField>FORMAT__Pay_Slip_For_The_Month_of_______Month_____FORMAT_Year__</DataField>
+        </Field>
+        <Field Name="TotalDaysinaMonth">
+          <DataField>TotalDaysinaMonth</DataField>
+        </Field>
+        <Field Name="PAY_SLIPCaption">
+          <DataField>PAY_SLIPCaption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance__Employee_Code_Caption">
+          <DataField>Monthly_Attendance__Employee_Code_Caption</DataField>
+        </Field>
+        <Field Name="DesignationCaption">
+          <DataField>DesignationCaption</DataField>
+        </Field>
+        <Field Name="DepartmentCaption">
+          <DataField>DepartmentCaption</DataField>
+        </Field>
+        <Field Name="Employee_CodeCaption">
+          <DataField>Employee_CodeCaption</DataField>
+        </Field>
+        <Field Name="EARNINGSCaption">
+          <DataField>EARNINGSCaption</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption">
+          <DataField>DEDUCTIONSCaption</DataField>
+        </Field>
+        <Field Name="AMOUNTCaption">
+          <DataField>AMOUNTCaption</DataField>
+        </Field>
+        <Field Name="PARTICULARSCaption">
+          <DataField>PARTICULARSCaption</DataField>
+        </Field>
+        <Field Name="PARTICULARSCaption_Control1102152045">
+          <DataField>PARTICULARSCaption_Control1102152045</DataField>
+        </Field>
+        <Field Name="AMOUNTCaption_Control1102152046">
+          <DataField>AMOUNTCaption_Control1102152046</DataField>
+        </Field>
+        <Field Name="Payable_DaysCaption">
+          <DataField>Payable_DaysCaption</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Pay_Slip_Month">
+          <DataField>Monthly_Attendance_Pay_Slip_Month</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Year">
+          <DataField>Monthly_Attendance_Year</DataField>
+        </Field>
+        <Field Name="Monthly_Attendance_Line_No_">
+          <DataField>Monthly_Attendance_Line_No_</DataField>
+        </Field>
+        <Field Name="PayBasic">
+          <DataField>PayBasic</DataField>
+        </Field>
+        <Field Name="PayBasicFormat">
+          <DataField>PayBasicFormat</DataField>
+        </Field>
+        <Field Name="PayHRA">
+          <DataField>PayHRA</DataField>
+        </Field>
+        <Field Name="PayHRAFormat">
+          <DataField>PayHRAFormat</DataField>
+        </Field>
+        <Field Name="PayCA">
+          <DataField>PayCA</DataField>
+        </Field>
+        <Field Name="PayCAFormat">
+          <DataField>PayCAFormat</DataField>
+        </Field>
+        <Field Name="PayCCA">
+          <DataField>PayCCA</DataField>
+        </Field>
+        <Field Name="PayCCAFormat">
+          <DataField>PayCCAFormat</DataField>
+        </Field>
+        <Field Name="PaySpl_All__">
+          <DataField>PaySpl_All__</DataField>
+        </Field>
+        <Field Name="PaySpl_All__Format">
+          <DataField>PaySpl_All__Format</DataField>
+        </Field>
+        <Field Name="PF">
+          <DataField>PF</DataField>
+        </Field>
+        <Field Name="PFFormat">
+          <DataField>PFFormat</DataField>
+        </Field>
+        <Field Name="PayEA">
+          <DataField>PayEA</DataField>
+        </Field>
+        <Field Name="PayEAFormat">
+          <DataField>PayEAFormat</DataField>
+        </Field>
+        <Field Name="PayPI">
+          <DataField>PayPI</DataField>
+        </Field>
+        <Field Name="PayPIFormat">
+          <DataField>PayPIFormat</DataField>
+        </Field>
+        <Field Name="PayLTA">
+          <DataField>PayLTA</DataField>
+        </Field>
+        <Field Name="PayLTAFormat">
+          <DataField>PayLTAFormat</DataField>
+        </Field>
+        <Field Name="PayFVA">
+          <DataField>PayFVA</DataField>
+        </Field>
+        <Field Name="PayFVAFormat">
+          <DataField>PayFVAFormat</DataField>
+        </Field>
+        <Field Name="PayMedical">
+          <DataField>PayMedical</DataField>
+        </Field>
+        <Field Name="PayMedicalFormat">
+          <DataField>PayMedicalFormat</DataField>
+        </Field>
+        <Field Name="PT">
+          <DataField>PT</DataField>
+        </Field>
+        <Field Name="PTFormat">
+          <DataField>PTFormat</DataField>
+        </Field>
+        <Field Name="INSUrance">
+          <DataField>INSUrance</DataField>
+        </Field>
+        <Field Name="INSUranceFormat">
+          <DataField>INSUranceFormat</DataField>
+        </Field>
+        <Field Name="IT">
+          <DataField>IT</DataField>
+        </Field>
+        <Field Name="ITFormat">
+          <DataField>ITFormat</DataField>
+        </Field>
+        <Field Name="Advance">
+          <DataField>Advance</DataField>
+        </Field>
+        <Field Name="AdvanceFormat">
+          <DataField>AdvanceFormat</DataField>
+        </Field>
+        <Field Name="TotalGross">
+          <DataField>TotalGross</DataField>
+        </Field>
+        <Field Name="TotalGrossFormat">
+          <DataField>TotalGrossFormat</DataField>
+        </Field>
+        <Field Name="PayGrandTotal_TotalDed">
+          <DataField>PayGrandTotal_TotalDed</DataField>
+        </Field>
+        <Field Name="PayGrandTotal_TotalDedFormat">
+          <DataField>PayGrandTotal_TotalDedFormat</DataField>
+        </Field>
+        <Field Name="TotalDed">
+          <DataField>TotalDed</DataField>
+        </Field>
+        <Field Name="PayGrandTotal">
+          <DataField>PayGrandTotal</DataField>
+        </Field>
+        <Field Name="PayGrandTotalFormat">
+          <DataField>PayGrandTotalFormat</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="BasicCaption">
+          <DataField>BasicCaption</DataField>
+        </Field>
+        <Field Name="HRACaption">
+          <DataField>HRACaption</DataField>
+        </Field>
+        <Field Name="ConveyanceCaption">
+          <DataField>ConveyanceCaption</DataField>
+        </Field>
+        <Field Name="Children_Eduaction_AllowanceCaption">
+          <DataField>Children_Eduaction_AllowanceCaption</DataField>
+        </Field>
+        <Field Name="City_Compensatory_AllowanceCaption">
+          <DataField>City_Compensatory_AllowanceCaption</DataField>
+        </Field>
+        <Field Name="Special_AllowanceCaption">
+          <DataField>Special_AllowanceCaption</DataField>
+        </Field>
+        <Field Name="Performance_Linked_IncrementCaption">
+          <DataField>Performance_Linked_IncrementCaption</DataField>
+        </Field>
+        <Field Name="LTACaption">
+          <DataField>LTACaption</DataField>
+        </Field>
+        <Field Name="MedicalCaption">
+          <DataField>MedicalCaption</DataField>
+        </Field>
+        <Field Name="FVACaption">
+          <DataField>FVACaption</DataField>
+        </Field>
+        <Field Name="PF_Caption">
+          <DataField>PF_Caption</DataField>
+        </Field>
+        <Field Name="ProfessionTax_Caption">
+          <DataField>ProfessionTax_Caption</DataField>
+        </Field>
+        <Field Name="Insurance_Caption">
+          <DataField>Insurance_Caption</DataField>
+        </Field>
+        <Field Name="InsuranceTax_Caption">
+          <DataField>InsuranceTax_Caption</DataField>
+        </Field>
+        <Field Name="Advance_Caption">
+          <DataField>Advance_Caption</DataField>
+        </Field>
+        <Field Name="TotalGrossLBL">
+          <DataField>TotalGrossLBL</DataField>
+        </Field>
+        <Field Name="TotalEarnedLBL">
+          <DataField>TotalEarnedLBL</DataField>
+        </Field>
+        <Field Name="NetPayableLBL">
+          <DataField>NetPayableLBL</DataField>
+        </Field>
+        <Field Name="TotalDeductionsLBL">
+          <DataField>TotalDeductionsLBL</DataField>
+        </Field>
+        <Field Name="MANAGERHR">
+          <DataField>MANAGERHR</DataField>
+        </Field>
+        <Field Name="DateLBL">
+          <DataField>DateLBL</DataField>
+        </Field>
+        <Field Name="This_is_computer_generated_slip_hence_signature_not_required_Caption">
+          <DataField>This_is_computer_generated_slip_hence_signature_not_required_Caption</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Document_Type">
+          <DataField>Processed_Salary_Document_Type</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Employee_Code">
+          <DataField>Processed_Salary_Employee_Code</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Pay_Slip_Month">
+          <DataField>Processed_Salary_Pay_Slip_Month</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Year">
+          <DataField>Processed_Salary_Year</DataField>
+        </Field>
+        <Field Name="Processed_Salary_Line_No_">
+          <DataField>Processed_Salary_Line_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
